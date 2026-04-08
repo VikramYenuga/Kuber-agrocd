@@ -6,18 +6,18 @@ metadata:
 spec:
   generators:
     - git:
-        repoURL: https://github.com/shivagande26/argocd-applications.git
+        repoURL: https://github.com/VikramYenuga/Kuber-agrocd.git
         revision: main
         directories:
-          - path: mysql # Match the `mysql` directory directly
-          - path: wordpress # Match the `wordpress` directory directly
+          - path: datastore-be/datastore-be # Match the `mysql` directory directly
+          - path: datastore-fe # Match the `wordpress` directory directly
   template:
     metadata:
       name: '{{path.basename}}' # Dynamically generated application name
     spec:
       project: default # ArgoCD project (make sure this project exists)
       source:
-        repoURL: https://github.com/shivagande26/Kubernetes.git # Kubernetes manifests repository
+        repoURL: https://github.com/VikramYenuga/kubernetes-datastore.git # Kubernetes manifests repository
         targetRevision: main # Git branch to track
         path: '{{path.basename}}' # Dynamically point to subdirectory in Kubernetes.git
       destination:
