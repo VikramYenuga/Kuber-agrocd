@@ -9,7 +9,7 @@ spec:
         repoURL: https://github.com/VikramYenuga/Kuber-agrocd.git
         revision: main
         directories:
-          - path: datastore-be/datastore-be # Match the `mysql` directory directly
+          - path: datastore-be # Match the `mysql` directory directly
           - path: datastore-fe # Match the `wordpress` directory directly
   template:
     metadata:
